@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp mô tả Temperature</title>
+</head>
+<body>
+</body>
+<script>
+    class Temperature {
+        get CX() {
+            return this._CX;
+        }
+
+        set CX(value) {
+            this._CX = value;
+        }
+
+        get FY() {
+            return this._FY;
+        }
+
+        set FY(value) {
+            this._FY = value;
+        }
+
+        get KZ() {
+            return this._KZ;
+        }
+
+        set KZ(value) {
+            this._KZ = value;
+        }
+
+        _CX;
+        _FY;
+        _KZ;
+
+        constructor(_CX, _FY, _KZ) {
+            this._CX = _CX;
+            this._FY = _FY;
+            this._KZ = _KZ;
+
+        }
+
+    }
+   function getCsangF(){
+        let doF= 9/5*Temperature.CX
+
+        return  alert( "độ F la :"+doF)
+    }
+   function getCsangKenvin(){
+        let doK=Temperature.CX + 273.15
+
+        return  alert("Độ Kenvin là :" + doK)
+    }
+
+    Temperature.CX =parseFloat( prompt("nhap do C"))
+    console.log(Temperature.CX)
+    console.log(getCsangF());
+    console.log(getCsangKenvin());
+</script>
+</html>
